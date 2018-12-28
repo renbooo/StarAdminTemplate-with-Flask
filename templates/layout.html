@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>StarAdmin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{{url_for('static', filename='vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='vendors/css/vendor.bundle.base.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='vendors/css/vendor.bundle.addons.css')}}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.png')}}" />
+  
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html">
+          <img src="{{url_for('static', filename='images/logo.svg')}}" alt="logo" />
+        </a>
+        <a class="navbar-brand brand-logo-mini" href="index.html">
+          <img src="{{url_for('static', filename='images/logo-mini.svg')}}" alt="logo" />
+        </a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Text Retrieval</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="mdi mdi-elevation-rise"></i>Image Retrieval</a>
+            </li>
+          </ul>
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <div class="nav-link">
+
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('textretrieve')}}">
+                <i class="menu-icon mdi mdi-television"></i>
+                <span class="menu-title">Text Retrieve</span>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon mdi mdi-content-copy"></i>
+                <span class="menu-title">Basic UI Elements</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+                  </li>
+                </ul>
+              </div>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('imageretrieve')}}">
+                <i class="menu-icon mdi mdi-backup-restore"></i>
+                <span class="menu-title">Image Retrieve</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('textimageretrieve')}}">
+                <i class="menu-icon mdi mdi-chart-line"></i>
+                <span class="menu-title">Text & Image Retrieve</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <!--weather card ends-->
+              {% block content %}
+              {% endblock %}
+              <!-- content-wrapper ends -->
+              <!-- partial:partials/_footer.html -->
+              <footer class="footer">
+                <div class="container-fluid clearfix">
+                  <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+                    <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
+                      <i class="mdi mdi-heart text-danger"></i>
+                    </span>
+                  </div>
+                </footer>
+                <!-- partial -->
+              </div>
+              <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+          </div>
+          <!-- container-scroller -->
+
+          <!-- plugins:js -->
+          <script src="{{url_for('static', filename='vendors/js/vendor.bundle.base.js')}}"></script>
+          <script src="{{url_for('static', filename='vendors/js/vendor.bundle.addons.js')}}"></script>
+          <!-- endinject -->
+          <!-- Plugin js for this page-->
+          <!-- End plugin js for this page-->
+          <!-- inject:js -->
+          <script src="{{url_for('static', filename='js/off-canvas.js')}}"></script>
+          <script src="{{url_for('static', filename='js/misc.js')}}"></script>
+          <!-- endinject -->
+          <!-- Custom js for this page-->
+          <script src="{{url_for('static', filename='js/dashboard.js')}}"></script>
+          <!-- End custom js for this page-->
+        </body>
+
+        </html>
